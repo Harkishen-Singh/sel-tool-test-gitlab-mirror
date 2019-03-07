@@ -11,7 +11,7 @@ require('geckodriver');
 // var domainsName = domains;
 
 var options = new chrome.Options();
-// options.addArguments("headless");
+options.addArguments("headless");
 options.addArguments("--no-sandbox");
 options.addArguments("--load-extension=../../../Aossie/MindTheWord_downloads_opts/MindTheWord_opts/dist/");
 
