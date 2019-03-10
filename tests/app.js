@@ -11,7 +11,7 @@ require('geckodriver');
 // var domainsName = domains;
 
 var options = new chrome.Options();
-options.addArguments("headless");
+// options.addArguments("headless");
 options.addArguments("--no-sandbox");
 options.addArguments("--load-extension=../../../Aossie/MindTheWord_downloads_opts/MindTheWord_opts/dist/");
 
@@ -79,19 +79,100 @@ describe('Test Execution in Chrome Environments', function() {
         });
     });
 
-    describe('Preparing Extension', () => {
+    describe('Preparing Extension', function() {
         this.timeout(40000);
 
         let extensionID;
-        it('Opening Extensions Page', (done) => {
+        it('Opening Extensions Page', function(done) {
             //open extension
             driver.get('chrome-extension://kfebdlhdaacofncoeiklbbcoiocpbgfd/views/options.html').then(() => {
             done();
-            driver.quit();
+            // driver.quit();
             })
             // driver.get('chrome-extension://<the extension identity>/views/options.html');
+        });
 
-        })
+        describe('Bootstrap Touring', function() {
+            this.timeout(30000);
+
+            it('Welcome screen', function(done) {
+                driver.findElement(By.xpath('//*[@id="step-0"]/div[3]/div/button[2]')).click().then((e) => {
+                    done();
+                });
+            });
+
+            it('Translation Setting Tab', function(done) {
+                setTimeout(() => {
+                    driver.findElement(By.xpath('//*[@id="step-1"]/div[3]/div/button[2]')).click().then((e) => {
+                        done();
+                    });
+                }, 500);
+            });
+
+            it('Setting up Translator Keys', function(done) {
+                setTimeout(() => {
+                    driver.findElement(By.xpath('//*[@id="step-2"]/div[3]/div/button[2]')).click().then((e) => {
+                        done();
+                    });
+                }, 500);
+            });
+
+            it('Creating a new language pattern', function(done) {
+                setTimeout(() => {
+                    driver.findElement(By.xpath('//*[@id="step-3"]/div[3]/div/button[2]')).click().then((e) => {
+                        done();
+                    });
+                }, 500);
+            });
+
+            it('Managing language patterns', function(done) {
+                setTimeout(() => {
+                    driver.findElement(By.xpath('//*[@id="step-4"]/div[3]/button')).click().then((e) => {
+                        done();
+                    });
+                }, 500);
+            });
+        });
+    });
+
+    describe('Translation Pattern Operations', function() {
+        this.timeout(20000);
+
+        it('Create Yandex, Azure, Google Keys', function(done) {
+
+            // generate random keys
+            let yandexKey = 'randomyandexkeytest',
+                azureKey = 'randomazurekeytest',
+                googleKey = 'randomgooglekeytest';
+
+            driver.findElement(By.xpath('//*[@id="translator-keys"]/div[2]/div[1]/input')).then(field => {
+                field.sendKeys(yandexKey);
+                driver.findElement(By.xpath('//*[@id="translator-keys"]/div[2]/div[2]/input')).then(field2 => {
+                    field2.sendKeys(azureKey);
+                    driver.findElement(By.xpath('//*[@id="translator-keys"]/div[2]/div[3]/input')).then(field3 => {
+                        field3.sendKeys(googleKey);
+                        done();
+                    });
+                });
+            });
+        });
+
+        it('Creating translation patterns', function(done) {
+            driver.manage().window().maximize();
+            driver.findElement(By.xpath('//*[@id="translator"]')).sendKeys('Yandex').then(() => {
+                driver.findElement(By.xpath('//*[@id="percentage"]')).sendKeys('70').then(() => {
+                    driver.findElement(By.xpath('//*[@id="srcLang"]')).sendKeys('English').then(() => {
+                        driver.findElement(By.xpath('//*[@id="targetLang"]')).sendKeys('Hindi').then(() => {
+                            // driver.wait(() => {
+                                driver.findElement(By.xpath('//*[@id="createPatterns"]')).click().then(() => {
+                                    done();
+                                });
+                            // }, 2000);
+                        });
+                    });
+                });
+            });
+        });
     });
 });
 
