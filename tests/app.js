@@ -1,5 +1,7 @@
 const webdriver = require('selenium-webdriver'),
     chrome = require('selenium-webdriver/chrome'),
+    actionSequence = webdriver.ActionSequence,
+    key = require('selenium-webdriver').Key,
     By = webdriver.By,
     logging = webdriver.logging,
     domains = require('./domains'),
@@ -11,8 +13,10 @@ require('geckodriver');
 // var domainsName = domains;
 
 var options = new chrome.Options();
-// options.addArguments("headless");
+// options.addArguments("--headless");
 options.addArguments("--no-sandbox");
+options.addArguments("--developer-mode");
+options.addArguments("--app-id=kfebdlhdaacofncoeiklbbcoiocpbgfd");
 options.addArguments("--load-extension=../../../Aossie/MindTheWord_downloads_opts/MindTheWord_opts/dist/");
 
 var optionsFireFox = new firefox.Options();
@@ -82,14 +86,15 @@ describe('Test Execution in Chrome Environments', function() {
     describe('Preparing Extension', function() {
         this.timeout(40000);
 
+        
+
         let extensionID;
         it('Opening Extensions Page', function(done) {
             //open extension
+            
             driver.get('chrome-extension://kfebdlhdaacofncoeiklbbcoiocpbgfd/views/options.html').then(() => {
-            done();
-            // driver.quit();
+                done();
             })
-            // driver.get('chrome-extension://<the extension identity>/views/options.html');
         });
 
         describe('Bootstrap Touring', function() {
