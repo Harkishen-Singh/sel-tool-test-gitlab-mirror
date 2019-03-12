@@ -32,7 +32,8 @@ npms:
         - apt-get install -y xvfb
         - npm install -g mocha
         - npm install
-        - xvfb-run -a mocha tests/
+        - cd tests/
+        - xvfb-run -a mocha app.js
     cache:
         paths:
             - node_modules/
