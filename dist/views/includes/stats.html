@@ -1,0 +1,104 @@
+<div style="width: 100%;height: 100%;">
+  <br>
+  <div class="animate-shadow-1" style="width: 110px;padding: 20px;background-color: white;cursor: pointer;" ng-click="opctrl.generateStats()">
+    <p style="color: #111;font-size: 15px;text-align: center;" id="generateButton">REFRESH</p>
+  </div>
+
+  <br><br>
+  <div style="width: 100%;clear:both;"><!--First Row-->
+
+    <div class="info-box animate-shadow-1" style="background-color: #00BCD4;">
+
+      <p style="color: white;font-size: 45px;margin: 0px;font-weight: bold;" id="nOfLearntWords">__</p>
+      <br>
+      <p style="color: white;font-size: 15px;margin-top:15px;padding-left:10px;">LEARNT WORDS</p>
+      
+    </div>
+
+    <div class="info-box animate-shadow-1" style="background-color: #E91E63;">
+
+      <p style="color: white;font-size: 45px;font-weight: bold;margin: 0px;" id="nOfBlacklistedWords">__</p>
+      <br>
+      <p style="color: white;font-size: 15px;margin-top:15px;padding-left:10px;">BLACKLISTED WORDS</p>
+      
+    </div>
+
+    <div class="info-box animate-shadow-1" style="background-color: #8BC34A;">
+
+      <p style="color: white;font-size: 45px;font-weight: bold;margin: 0px;" id="nOfSavedWords">__</p>
+      <br>
+      <p style="color: white;font-size: 15px;margin-top:15px;padding-left:10px;">SAVED TRANSLATIONS</p>
+      
+    </div>
+
+    <div class="info-box animate-shadow-1" style="background-color: #FF9800;">
+
+      <p style="color: white;font-size: 45px;font-weight: bold;margin: 0px;" id="nOfTotalWords">__</p>
+      <br>
+      <p style="color: white;font-size: 15px;margin-top:15px;padding-left:10px;">WORDS TRANSLATED</p>
+      
+    </div>
+
+  </div>
+
+  <div style="width: 100%;height: auto;clear: both;"><!--Second row-->
+    <div class="animate-shadow-1" style="background-color: white;min-width: 100%;padding: 20px;float: left;margin-right: 20px;">
+      <div style="border-bottom: 1px solid rgba(204, 204, 204, 0.35);margin-bottom: 15px;">
+        <p style="color: #111;font-size: 15px;padding-bottom:15px;"># OF WORDS TRANSLATED PAST 30 DAYS</p>
+      </div>
+
+
+      <div style="width: 100%;">
+        <canvas id="wordsTranslatedArea"></canvas>
+      </div>
+
+    </div>
+
+   
+  </div>
+
+  <div style="width: 100%;height: auto;clear: both;padding-top: 35px;"><!--Third row-->
+
+    <!--<div class="animate-shadow-1" style="background-color: #E91E63;min-width: 30%;padding: 20px;float: left;margin-right: 20px;height: 300px;">
+      <div style="border-bottom: 1px solid white;margin-bottom: 15px;">
+        <p style="color: white;font-size: 15px;padding-bottom: 10px;"># OF WORD TRANSLATED</p>
+        <p style="color: white;font-size: 15px;padding-bottom:15px;">TODAY VS YESTERDAY</p>
+      </div>
+    </div>-->
+
+    <div style="min-width: 30%;float: left;margin-right: 20px;height: 300px;">
+
+      <div class="animate-shadow-1" style="background-color: #E91E63;width: 100%;padding: 20px;height: 135px;">
+        <p style="color: white;font-size: 45px;margin: 0px;font-weight: bold;margin-top:12.5px;" id="nOfBlacklistedWeb">__</p>
+        <br>
+        <p style="color: white;font-size: 15px;">BLACKLISTED WEBSITES</p>
+
+      </div>
+
+      <div class="animate-shadow-1" style="background-color: #55b9cf;width: 100%;padding: 20px;height: 135px;margin-top: 20px;">
+        <p style="color: white;font-size: 45px;margin: 0px;font-weight: bold;margin-top:12.5px;" id="nOfUserDefined">__</p>
+        <br>
+        <p style="color: white;font-size: 15px;">USER DEFINED TRANSLATIONS</p>
+
+      </div>
+
+    </div>
+
+    <div class="animate-shadow-1" style="background-color: #439286;min-width: 65%;padding: 20px;float: left;height: 300px;">
+      <div style="border-bottom: 1px solid white;margin-bottom: 15px;">
+        <p style="color: white;font-size: 15px;padding-bottom: 10px;">TRANSLATORS</p>
+      </div>
+
+      <div style="width: 100%;height:250px;padding-top: 20px;">
+        <canvas id="wordsTransPatterns"></canvas>
+      </div>
+
+    </div>
+
+  
+  </div>
+
+
+
+</div>
+

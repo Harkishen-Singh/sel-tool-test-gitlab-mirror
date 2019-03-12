@@ -18,7 +18,7 @@ options.addArguments("--no-sandbox");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--disable-gpu");
 // options.addArguments("--app-id=kfebdlhdaacofncoeiklbbcoiocpbgfd");
-options.addArguments("--load-extension=../../../Aossie/MindTheWord_downloads_opts/MindTheWord_opts/dist/");
+options.addArguments("--load-extension=../dist/");
 
 var optionsFireFox = new firefox.Options();
 optionsFireFox.addArguments("--headless");
@@ -80,7 +80,7 @@ describe('Test Execution in Chrome Environments', function() {
         it('Opening Extensions Page', function(done) {
             //open extension
             
-            driver.get('chrome-extension://kfebdlhdaacofncoeiklbbcoiocpbgfd/views/options.html').then(() => {
+            driver.get('chrome-extension://damnnkokigifkodkncfnhcdhlbhfheac/views/options.html').then(() => {
                 done();
             })
         });
