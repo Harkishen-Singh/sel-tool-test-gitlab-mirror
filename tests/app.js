@@ -14,9 +14,10 @@ require('geckodriver');
 
 var options = new chrome.Options();
 // options.addArguments("--headless");
+options.addArguments("--disable-dev-shm-usage");
+options.addArguments("--disable-gpu");
 options.addArguments("--no-sandbox");
 // options.addArguments("--app-id=kfebdlhdaacofncoeiklbbcoiocpbgfd");
-options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--load-extension=../../../Aossie/MindTheWord_downloads_opts/MindTheWord_opts/dist/");
 
 var optionsFireFox = new firefox.Options();
@@ -49,15 +50,15 @@ describe('Test Execution in Chrome Environments', function() {
             });
         });
 
-        it('Quering Search words', function(done){
-            driver.findElements(By.xpath('//*[@id="tsf"]/div[2]/div/div[1]/div/div[1]/input')).then(r => {
-                console.log('before send keys');
-                r[0].sendKeys('harkishensingh github');
-                console.log('after send keys');
-                assert.notEqual(r.length, 0, "received result does not exist");
-                done();
-            });
-        });
+        // it('Quering Search words', function(done){
+        //     driver.findElements(By.xpath('//*[@id="tsf"]/div[2]/div/div[1]/div/div[1]/input')).then(r => {
+        //         console.log('before send keys');
+        //         r[0].sendKeys('harkishensingh github');
+        //         console.log('after send keys');
+        //         assert.notEqual(r.length, 0, "received result does not exist");
+        //         done();
+        //     });
+        // });
 
         it('Post Query / results', (done) => {
             driver.findElement(By.xpath('//*[@id="tsf"]/div[2]/div/div[3]/center/input[1]')).click().then(rr => {
