@@ -15,7 +15,6 @@ require('geckodriver');
 var options = new chrome.Options();
 // options.addArguments("--headless");
 options.addArguments("--no-sandbox");
-options.addArguments("--developer-mode");
 // options.addArguments("--app-id=kfebdlhdaacofncoeiklbbcoiocpbgfd");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--load-extension=../../../Aossie/MindTheWord_downloads_opts/MindTheWord_opts/dist/");
@@ -45,22 +44,7 @@ describe('Test Execution in Chrome Environments', function() {
         this.timeout(20000);
 
         it('Opening google.co.in page in headless browser', (done) => {
-            driver.get('http://www.google.co.in').then(() => {
-                // var logs = driver.manage().logs().get("browser");
-                // console.warn("logs below")
-                // logs.then(res => {
-                //     console.warn(logs)
-                // })
-                console.warn('console below')
-                // console.warn(
-                    // driver.manage().logs().get(logging.Type.BROWSER).then(er => {
-                    //     console.log(er)
-                    // })
-                    // )
-                console.warn('Something return statements');
-                driver.executeScript('console.log("Hi")').then((returnedVals) => {
-                    console.warn(returnedVals);
-                });
+            driver.get('https://www.google.com').then(() => {
                 done();
             });
         });
