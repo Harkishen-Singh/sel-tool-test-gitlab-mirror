@@ -30,12 +30,13 @@ npms:
         # - wget --no-verbose -O /tmp/firefox.tar.bz2 https://download-installer.cdn.mozilla.net/pub/firefox/releases/57.0/linux-x86_64/en-US/firefox-57.0.tar.bz2
         # - tar -C /opt -xjf /tmp/firefox.tar.bz2 && mv /opt/firefox /opt/firefox-57.0 && ln -fs /opt/firefox-57.0/firefox /usr/bin/firefox
         # test environments 12 march 2019
-        # Update packages
-        - apt-get update -yqqq
-
         # Install Chrome browser
         # - apt-get install -y google-chrome-stable
-        - dpkg -i google-chrome-stable_current_amd64.deb
+        - set -xe
+        - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+        - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
+        # Update packages
+        - apt-get update -yqqq
 
         
         # Install Virtual Display emulator
