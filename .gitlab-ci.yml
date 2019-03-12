@@ -34,7 +34,8 @@ npms:
         - apt-get update -yqqq
 
         # Install Chrome browser
-        - apt-get install -y google-chrome-stable
+        # - apt-get install -y google-chrome-stable
+        - dpkg -i google-chrome-stable_current_amd64.deb
 
         
         # Install Virtual Display emulator
