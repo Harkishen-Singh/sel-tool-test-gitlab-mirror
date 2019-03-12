@@ -67,7 +67,9 @@ describe('Test Execution in Chrome Environments', function() {
 
         it('Quering Search words', function(done){
             driver.findElements(By.xpath('//*[@id="tsf"]/div[2]/div/div[1]/div/div[1]/input')).then(r => {
-                r[0].sendKeys('harkishensingh github')
+                console.log('before send keys');
+                r[0].sendKeys('harkishensingh github');
+                console.log('after send keys');
                 assert.notEqual(r.length, 0, "received result does not exist");
                 done();
             });
