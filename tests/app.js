@@ -16,7 +16,8 @@ var options = new chrome.Options();
 // options.addArguments("--headless");
 options.addArguments("--no-sandbox");
 options.addArguments("--developer-mode");
-options.addArguments("--app-id=kfebdlhdaacofncoeiklbbcoiocpbgfd");
+// options.addArguments("--app-id=kfebdlhdaacofncoeiklbbcoiocpbgfd");
+options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--load-extension=../../../Aossie/MindTheWord_downloads_opts/MindTheWord_opts/dist/");
 
 var optionsFireFox = new firefox.Options();
