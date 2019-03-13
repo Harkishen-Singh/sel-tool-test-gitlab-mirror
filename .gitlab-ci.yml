@@ -37,6 +37,7 @@ npms:
         # Update packages
         - apt-get update -yqqq
         - apt-get install -y google-chrome-stable
+        - google-chrome-stable
 
         
         # Install Virtual Display emulator
