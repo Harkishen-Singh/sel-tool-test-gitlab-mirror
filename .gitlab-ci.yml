@@ -40,6 +40,7 @@ npms:
 
         
         # Install Virtual Display emulator
+        - cat $HOME/.config/google-chrome/Default/Preferences
         - apt-get install -y xvfb
         - npm install -g mocha
         - npm install
