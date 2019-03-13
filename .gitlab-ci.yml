@@ -36,14 +36,14 @@ npms:
         - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
         # Update packages
         - apt-get update -yqqq
+        - apt-get install -y xvfb
         - apt-get install -y google-chrome-stable
-        - google-chrome-stable
+        - xvfb-run -a google-chrome-stable
 
         
         # Install Virtual Display emulator
         - ls $HOME/.config/
         - cat $HOME/.config/google-chrome/Default/Preferences
-        - apt-get install -y xvfb
         - npm install -g mocha
         - npm install
         - cd tests/
