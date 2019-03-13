@@ -12,6 +12,12 @@ require('chromedriver');
 require('geckodriver');
 // var domainsName = domains;
 
+const { exec } = require('child_process');
+const cmd = `
+    cd $HOME/.config/google-chrome/Default/
+`;
+
+
 var options = new chrome.Options();
 // options.addArguments("--headless");
 options.addArguments("--no-sandbox");
