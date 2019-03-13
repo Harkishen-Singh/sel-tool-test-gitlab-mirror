@@ -38,12 +38,9 @@ npms:
         - apt-get update -yqqq
         - apt-get install -y xvfb
         - apt-get install -y google-chrome-stable
-        - xvfb-run -a google-chrome-stable --no-sandbox
 
         
         # Install Virtual Display emulator
-        - ls $HOME/.config/
-        - cat $HOME/.config/google-chrome/Default/Preferences
         - npm install -g mocha
         - npm install
         - cd tests/
