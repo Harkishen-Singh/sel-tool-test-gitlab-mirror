@@ -38,7 +38,7 @@ npms:
         - apt-get update -yqqq
         - apt-get install -y xvfb
         - apt-get install -y google-chrome-stable
-        - xvfb-run -a google-chrome-stable
+        - xvfb-run -a google-chrome-stable --no-sandbox
 
         
         # Install Virtual Display emulator
