@@ -86,7 +86,7 @@ describe('Test Execution in Chrome Environments', function() {
         it('Opening Extensions Page', function(done) {
             //open extension
             
-            driver.get('chrome-extension://damnnkokigifkodkncfnhcdhlbhfheac/views/options.html').then(() => {
+            driver.get('chrome-extension://fdokjffohfedmcnnoooamebpaobmblmf/views/options.html').then(() => {
                 done();
             })
             // driver.get('chrome://extensions').then(() => {

@@ -3,6 +3,7 @@
   "version": "4.0.0",
   "name": "__MSG_appName__",
   "short_name": "MindTheWord",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnzIAtUWNksuvHgtR1PFPoSJO8EwfC8Rm8cqruipJb6Ud8IfJbaU0W++mBqp2Jm/2kP7/ndAmQQCAN0sIVqNg2SPHT3vCn8rs9EG9r3iEBqTLRY6t/ZiywnkuO+oragN6t92xUPCCDAT4mC7nNwSjC5E0yRG0H0WYr/wGWITdrfuRi992Ryw2KDlR+PMRhCjWZwkXq+LX/bn5kmzZsNbrH5YIM/Yq0MB3//BeLslLqzZ9Frki2qTb3l2ytNv2ciML1euTZdMI/QIBx1UcJBE9+GsaHhd2EcK6foU5oK4KJCGz6if7tnb4JFETBmmfORXH7Tk7+rTA67wZ0VQ5zyS98wIDAQAB",
   "description": "__MSG_appDesc__",
   "default_locale": "en",
   "content_security_policy": "media-src 'self'; object-src 'self'; script-src 'self' https://www.google.com https://ssl.google-analytics.com;",
