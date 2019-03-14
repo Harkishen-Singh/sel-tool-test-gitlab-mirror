@@ -80,21 +80,12 @@ describe('Test Execution in Chrome Environments', function() {
     describe('Preparing Extension', function() {
         this.timeout(40000);
 
-        
-
         let extensionID;
         it('Opening Extensions Page', function(done) {
             //open extension
-            
             driver.get('chrome-extension://fdokjffohfedmcnnoooamebpaobmblmf/views/options.html').then(() => {
                 done();
             })
-            // driver.get('chrome://extensions').then(() => {
-            //     driver.executeScript("document.getElementsByTagName('')")
-            //     setTimeout(() => {
-            //         driver.findElement(By.xpath('//*[@id="devMode"]')).click();
-            //     }, 2000);
-            // })
         });
 
         describe('Bootstrap Touring', function() {
