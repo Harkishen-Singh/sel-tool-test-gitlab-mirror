@@ -86,9 +86,15 @@ describe('Test Execution in Chrome Environments', function() {
         it('Opening Extensions Page', function(done) {
             //open extension
             
-            driver.get('chrome-extension://hiblphjdakkcflikkjlmnndpmfoeimfm/views/options.html').then(() => {
+            driver.get('chrome-extension://damnnkokigifkodkncfnhcdhlbhfheac/views/options.html').then(() => {
                 done();
             })
+            // driver.get('chrome://extensions').then(() => {
+            //     driver.executeScript("document.getElementsByTagName('')")
+            //     setTimeout(() => {
+            //         driver.findElement(By.xpath('//*[@id="devMode"]')).click();
+            //     }, 2000);
+            // })
         });
 
         describe('Bootstrap Touring', function() {
