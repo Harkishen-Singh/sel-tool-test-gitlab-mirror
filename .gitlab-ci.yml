@@ -44,6 +44,9 @@ npms:
         # Install Virtual Display emulator
         - npm install -g mocha
         - npm install
+        - echo "keys"
+        - echo $yandex_translation_key
+        - echo $yandex_dictionary_key
         - cd tests/
         -  xvfb-run -s "-screen 0 1920x1080x16" -a mocha app.js 
     cache:
