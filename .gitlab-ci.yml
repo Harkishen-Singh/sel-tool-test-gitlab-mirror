@@ -1,6 +1,6 @@
 # image: registry.gitlab.com/harkishen-singh/sel-tool-test
 # image: node:latest
-image: harkishen/harkishen/selenium-ci-aossie-mtw-v1-test:latest
+image: harkishen/selenium-ci-aossie-mtw-v1-test:latest
 
 stages:
     # - installing_browsers
