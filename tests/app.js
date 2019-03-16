@@ -6,6 +6,7 @@ const webdriver = require('selenium-webdriver'),
     logging = webdriver.logging,
     domains = require('./domains'),
     assert = require('assert'),
+    yandex_api_key = process.env.yandex_key,
     firefox = require('selenium-webdriver/firefox');
     { describe, it, after, before } require('selenium-webdriver/testing')
 require('chromedriver');
@@ -41,6 +42,7 @@ describe('Test Execution in Chrome Environments', function() {
         it('launching chrome instance', (done) => {
             driver = new webdriver.Builder().setChromeOptions(options).forBrowser('chrome').build();
             driver.then(() => {
+                console.warn('yandexkey is '+yandex_api_key);
                 done();
             });
             // driver.manage().logs()

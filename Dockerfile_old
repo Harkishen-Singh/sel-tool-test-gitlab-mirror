@@ -17,9 +17,3 @@ RUN apt-get update
 RUN apt-get -qq install firefox nodejs npm
 RUN node --version && npm --version
 
-RUN apt-get -qq install xvfb xserver-xephyr
-
-# api keys
-
-RUN export yandex_translation_key="trnsl.1.1.20190201T091415Z.1803a5df1896d502.a4a1f2086e5e5cf2141b8017ec90fb0eb9a5ffce"
-RUN export yandex_dictionary_key="dict.1.1.20190204T161745Z.bb0aa94e776353fa.42c0e735b951fd43e7c9c5038f702dcad26fdb70"
