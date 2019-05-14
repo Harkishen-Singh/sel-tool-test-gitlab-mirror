@@ -13,6 +13,7 @@
     "chromedriver": "^2.46.0",
     "faker": "^4.1.0",
     "geckodriver": "^1.14.1",
-    "selenium-webdriver": "^4.0.0-alpha.1"
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "webextensions-geckodriver": "^0.5.1"
   }
 }
