@@ -18,6 +18,8 @@ const cmd = `
     cd $HOME/.config/google-chrome/Default/
 `;
 
+const webExtensionsGeckoDriver = require('webextensions-geckodriver');
+const webExtension = webExtensionsGeckoDriver('../dist/manifest.json');
 
 var options = new chrome.Options();
 // options.addArguments("--headless");
@@ -31,7 +33,6 @@ var optionsFireFox = new firefox.Options();
 optionsFireFox.addArguments("--headless");
 optionsFireFox.addArguments("--no-sandbox");
 optionsFireFox.addArguments("--enable-addon-debugging");
-optionsFireFox.addArguments("--load-extension=../../../Aossie/MindTheWord_downloads_opts/MindTheWord_opts/dist/manifest.json");
 
 let driver;
 
@@ -189,6 +190,9 @@ describe('Test Execution in Firefox Environments', function() {
     describe('Google Home Page tests', function() {
         this.timeout(20000);
 
+        let geckodriver = webExtension.geckodriver;
+        // use geckodriver for loading pages. using driver for loading will again use chrome only. refer to 
+        // https://www.npmjs.com/package/webextensions-geckodriver#example
         it('Opening google.co.in page in headless browser', (done) => {
             driver.get('http://www.google.co.in').then(() => {
                 done();
