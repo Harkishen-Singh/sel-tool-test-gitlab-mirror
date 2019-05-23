@@ -43,9 +43,9 @@ npms:
         
         # Install Virtual Display emulator
         - npm install -g mocha
-        - npm cache clear
-        # - npm install
-        - npm install chromedriver geckodriver selenium-webdriver
+        # - npm cache clear
+        - npm install
+        # - npm install chromedriver geckodriver selenium-webdriver faker cheerio
         - echo "keys"
         - echo $yandex_translation_key
         - echo $yandex_dictionary_key
