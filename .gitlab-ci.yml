@@ -43,6 +43,7 @@ npms:
         
         # Install Virtual Display emulator
         - npm install -g mocha
+        - npm clear cache
         - npm install
         - echo "keys"
         - echo $yandex_translation_key
