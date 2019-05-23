@@ -45,6 +45,7 @@ npms:
         - npm install -g mocha
         - npm cache clear
         - npm install
+        # - npm install chromedriver geckodriver selenium-webdriver
         - echo "keys"
         - echo $yandex_translation_key
         - echo $yandex_dictionary_key
